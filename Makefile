@@ -1,4 +1,4 @@
-.PHONY: all clean deb
+.PHONY: all clean deb install
 
 all:
 	$(MAKE) -C libbos2
@@ -16,3 +16,10 @@ clean:
 
 deb:
 	dpkg-buildpackage -us -uc
+
+install:
+	$(MAKE) -C libbos2 install
+	$(MAKE) -C libbos2-text install
+	$(MAKE) -C libbos2-json install
+	$(MAKE) -C bos2-client install
+	$(MAKE) -C bos2-daemon install
