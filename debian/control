@@ -1,0 +1,15 @@
+Source: bos2
+Section: utils
+Priority: optional
+Maintainer: Your Name <your.email@example.com>
+Build-Depends: debhelper (>= 10), libjson-c-dev
+
+Package: libbos2
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Base logging library for bos2
+
+Package: bos2-meta
+Architecture: all
+Depends: libbos2, libbos2-text, libbos2-json, bos2-client, bos2-daemon
+Description: Meta-package for bos2 system
